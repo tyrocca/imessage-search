@@ -7,6 +7,7 @@ import {
     ScrollView,
     NativeModules,
 } from 'react-native';
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -31,7 +32,7 @@ class AmazingMessageExtension extends Component {
         return (
             <ScrollView style={styles.container}>
             <Text style={styles.welcome}>
-            Welcome to React Native!
+            Welcome to React Native! Steve Blows Ass
             </Text>
             <Text style={styles.instructions}>
             To get started, edit index.ios.js
