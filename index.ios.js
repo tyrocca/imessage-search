@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
     AppRegistry,
@@ -6,6 +5,7 @@ import {
     Text,
     ScrollView,
     NativeModules,
+    TouchableHighlight,
 } from 'react-native';
 const styles = StyleSheet.create({
     container: {
@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
 });
 
 class AmazingMessageExtension extends Component {
+    constructor() {
+        super();
+        this.state = {message: "foobar"};
+    }
 
     render() {
         console.log("FOO BAR BAZ");
@@ -33,6 +37,11 @@ class AmazingMessageExtension extends Component {
             <Text style={styles.welcome}>
             Welcome to React Native!
             </Text>
+            <TouchableHighlight onPress={() => this.setState({message: "hi ty"})}>
+            <Text>
+            {this.state.message}
+            </Text>
+            </TouchableHighlight>
             <Text style={styles.instructions}>
             To get started, edit index.ios.js
             </Text>
